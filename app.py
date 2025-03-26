@@ -39,6 +39,12 @@ def login():
             flash('Credenziali non valide', 'danger')
     return render_template('login.html')
 
+@app.route('/logout', methods=['POST'])
+def logout():
+    session.clear()  # Clear all session data
+    return redirect(url_for('homepage')) 
+
+
 # Route per la registrazione
 @app.route('/register', methods=['GET', 'POST'])
 def register():

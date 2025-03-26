@@ -1,7 +1,38 @@
 {% extends 'base.html' %}
 {% block title %}Area Personale - Planetario{% endblock %}
 {% block content %}
-<h1>Area Personale</h1>
-<p>Benvenuto, {{ username }}!</p>
-<p>Qui potrai trovare informazioni personalizzate sul sistema solare.</p>
+<div class="personal-area">
+    <h1>Area Personale</h1>
+    <p>Benvenuto, {{ username }}!</p>
+    <p>Qui potrai trovare informazioni personalizzate sul sistema solare.</p>
+
+    <!-- Favorite Planets Section -->
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">I tuoi pianeti preferiti</h5>
+            <p class="card-text">Non hai ancora selezionato pianeti preferiti. Visita la pagina di un pianeta e aggiungilo ai tuoi preferiti!</p>
+        </div>
+    </div>
+
+    <!-- Solar System Summary -->
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Riepilogo del Sistema Solare</h5>
+            <ul>
+                <li>Numero totale di pianeti: 8</li>
+                <li>Pianeta più vicino al Sole: Mercurio</li>
+                <li>Pianeta più lontano dal Sole: Nettuno</li>
+                <li>Pianeta con l'anno più lungo: Nettuno (60,190 giorni)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Recent Activity Section -->
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Attività recente</h5>
+            <p class="card-text">Non ci sono attività recenti. Inizia a esplorare i pianeti per vedere qui le tue attività!</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
