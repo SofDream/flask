@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Homepage - Planetario{% endblock %}
+{% block content %}
+<h1>Overview del Sistema Solare</h1>
+<img src="{{ url_for('static', filename='s_solare.jpeg') }}" alt="Sistema Solare">
+<p>
+    Il Sistema Solare è composto dal Sole e da una moltitudine di corpi celesti, tra cui pianeti, satelliti, asteroidi e comete.
+    Scopri di più su ciascun pianeta cliccando sui link nella navbar!
+</p>
+{% endblock %}

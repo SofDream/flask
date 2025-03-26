@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}{{ current_planet.nome }} - Planetario{% endblock %}
+{% block content %}
+<div class="planet-detail">
+  <!-- Planet Header -->
+  <header class="planet-header">
+    <h1>{{ current_planet.nome }}</h1>
+  </header>
+
+  <!-- Main Content: Image and Information -->
+  <div class="planet-content">
+    <!-- Planet Image -->
+    <div class="planet-image">
+      <img src="{{ url_for('static', filename='images/' ~ current_planet.nome|lower ~ '.jpg') }}" alt="{{ current_planet.nome }}">
+    </div>
+
+    <!-- Planet Information -->
+    <div class="planet-info">
+      <table>
+        <tr>
+          <th>ID</th>
+          <td>{{ current_planet.id }}</td>
+        </tr>
+        <tr>
+          <th>Età</th>
+          <td>10^{{ current_planet.eta }}</td>
+        </tr>
+        <tr>
+          <th>Dimensioni</th>
+          <td>10^{{ current_planet.dimensioni }} km³</td>
+        </tr>
+        <tr>
+          <th>Composizione</th>
+          <td>{{ current_planet.composizione }}</td>
+        </tr>
+        <tr>
+          <th>Distanza dal Sole</th>
+          <td>{{ current_planet.dist }} anni luce</td>
+        </tr>
+        <tr>
+          <th>Distanza dalla Terra</th>
+          <td>{{ current_planet.distT }} anni luce</td>
+        </tr>
+        <tr>
+          <th>Durata dell'Anno</th>
+          <td>{{ current_planet.lenY }} giorni</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
